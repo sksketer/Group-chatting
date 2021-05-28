@@ -1,5 +1,5 @@
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: rgb(32, 255, 99);
 }
 .container {
@@ -15,7 +15,6 @@ body {
 }
 .nav #logo {
     margin: 0px 8px;
-    background-color: green;
 }
 .nav #login {
     margin: 0px 8px;
@@ -43,18 +42,47 @@ body {
     border-radius: 18px;
     background-color: rgb(206, 255, 206);
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
 }
-.main .displayMessage .userMessage #user {
-    background-color: yellow;
-    width: 100px;
-    height: 100px;
+.main .displayMessage .userMessage {
+    display: flex;
+    flex-direction: row;
+}
+.userMessage #user {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: rgb(255, 174, 0);
+    position: relative;
+}
+name {
+    position: absolute;
+    margin-bottom: -15px;
+    left: 0;
+    bottom: 0;
+}
+.userMessage #msg-container {
+    margin-left: 22px;
+}
+.userMessage #msg {
+    display: block;
+    max-width: 550px;
+    padding: 3px 5px;
+    background-color: lightgreen;
+    border: 1px solid darkgreen;
 }
 .main .textMessage {
     height: 5vh;
     padding: 8px 0px;
 }
+.main .textMessage form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .main .textMessage form #message {
-    width: 88%;
+    width: 70vw;
     color: white;
     outline: none; border: 2px solid rgb(66, 66, 66);
     border-radius: 50px;
@@ -71,6 +99,7 @@ body {
 }
 .main .textMessage form #send-btn {
     width: 8%;
+    float: right;
     outline: none;
     border: 2px solid darkgreen;
     color: white;
