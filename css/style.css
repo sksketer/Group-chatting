@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 body {
     /* overflow: hidden; */
     background-color: rgb(32, 255, 99);
 }
 .container {
     padding: 0px;
-    overflow: hidden;
 }
 .nav {
     display: flex;
@@ -16,17 +16,34 @@ body {
 .nav #logo {
     margin: 0px 8px;
 }
+.nav #heading {
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Sigmar One', cursive;
+    color: white;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
 .nav #login {
     margin: 0px 8px;
     padding: 8px 15px;
     font-size: medium;
     font-weight: bolder;
+    border: 2px solid red;
     border-radius: 22px;
     cursor: pointer;
+    background: red;
+}
+.nav #login:hover {
+    background: transparent;
+    color: red;
 }
 .nav #login a{
     text-decoration: none;
-    color: rgb(253, 52, 52);
+    color: rgb(255, 255, 255);
+}
+.nav #login a:hover {
+    color: red;
 }
 .main {
     display: flex;
@@ -71,6 +88,7 @@ name {
     padding: 3px 5px;
     background-color: lightgreen;
     border: 1px solid darkgreen;
+    border-radius: 22px;
 }
 .main .textMessage {
     height: 5vh;
