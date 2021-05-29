@@ -1,0 +1,65 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{
+    background-color: rgb(57, 221, 213);
+}
+.signup {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 22px;
+    align-items: center;
+    border: 2px solid rgb(2, 28, 61);
+    box-shadow: inset 0px 0px 50px rgb(4, 57, 78);
+}
+form .username label {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+form input {
+    padding: 5px 12px;
+    outline: none;
+    margin-top: 2px;
+    border: 1px solid transparent;
+}
+form input:focus {
+    background-color: rgb(191, 255, 255);
+    box-shadow: 0px 0px 3px white;
+}
+form .btn {
+    display: flex;
+    justify-content: space-around;
+}
+#save-btn {
+    border: 2px solid green;
+    color: green;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(to left, transparent 50%, rgb(88, 255, 88) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-in-out;
+}
+#save-btn:hover {
+    background-position: left;
+}
+#reset-btn {
+    border: 2px solid red;
+    background: transparent;
+    color: red;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(to left, transparent 50%, rgb(255, 166, 166) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-in-out;
+}
+#reset-btn:hover {
+    background-position: left;
+}
+form a{
+    margin: 8px 0px;
+    color: linear-gradient(to left, white 50%, rgb(3, 0, 202) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-in-out;
+}
