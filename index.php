@@ -23,6 +23,7 @@
             <div class="btn">
                 <input type="submit" value="Login" name="login" id="login-btn">
             </div>
+            <a href="signup.html">Don't have Account?</a>
         </form>
     </div>
 </body>
