@@ -9,6 +9,7 @@
 </head>
 <body>
 <?php
+//    header("refresh: 2");
     $conn = mysqli_connect("localhost", "root", "", "live chatting");
     $msg = "SELECT * FROM `messages`";
     $result= mysqli_query($conn, $msg);
@@ -16,11 +17,16 @@
     <div class="container">
         <?php require 'components/navigationBar.php';?>
         <div class="main">
-            <div class="displayMessage">
-                <?php
+            <?php
+                echo '<div class="displayMessage">';
                     while($row = mysqli_fetch_assoc($result) ) {
-                        echo '<div class="userMessage">';
-                            echo '<span id="user"><name>' . $row['username'] . ' </name></span>';
+                        $flexDirection = ($_SESSION['username'] == $row['username']) ? "row-reverse" : "row";
+                        $color = ($_SESSION['username'] == $row['username']) ? "orange" : "yellow";
+
+                        echo '<div class="userMessage" style="flex-direction: '.$flexDirection.'">';
+                            echo '<span id="user" style="background: '.$color.'">';
+                                echo '<name>' . $row['username'] . ' </name>';
+                            echo '</span>';
                             echo '<span id="msg-container">';
                             echo '    <div id="msg">';
                             echo  $row['message'];
@@ -29,8 +35,8 @@
                             echo "<br>";
                         echo '</div>';
                     };
-                ?>
-            </div>
+                echo '</div>';
+            ?>
             <div class="textMessage">
                 <form action="components/sendMessege.php" method="post">
                     <input type="text" name="message" id="message" required placeholder="message" autocomplete="off" spellcheck="true">
