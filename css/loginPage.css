@@ -1,0 +1,16 @@
+.main {
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main form{
+    width: 45%;
+    margin: auto;
+    background-color: rgb(221, 33, 33);
+}
+.main form .dataField{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
