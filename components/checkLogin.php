@@ -6,8 +6,7 @@
 
     $email = $_POST["email"]; 
     $password = $_POST["password"]; 
-    
-    echo $email." ".$password;
+
     // Create connection
     $conn = mysqli_connect($servername, $username, $connection_password, $database);
 
@@ -18,7 +17,6 @@
 
     $checkemailis=$checkpasswordis=0;
     $username="";
-    
     
     while($row=mysqli_fetch_assoc($result)) {
         if($row['email'] == $email) {
@@ -38,7 +36,7 @@
 
     if($checkemailis > 0 && $checkpasswordis > 0) {
         echo "You are normal user";
-        header("Location: ../index.php");
+        header("Location: ../main.php");
     }
     else if($checkemailis > 0 && $checkpasswordis == 0) {
         echo "Password Not Matched";
