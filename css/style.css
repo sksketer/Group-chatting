@@ -24,7 +24,7 @@ body {
     -webkit-text-stroke-width: 0.2px;
     -webkit-text-stroke-color: rgb(0, 0, 0);
 }
-.nav #login {
+/* .nav #login {
     margin: 0px 8px;
     padding: 8px 15px;
     font-size: medium;
@@ -37,14 +37,26 @@ body {
 .nav #login:hover {
     background: transparent;
     color: red;
-}
+} */
 .nav #login a{
+    margin: 0px 8px;
+    padding: 8px 15px;
+    font-size: medium;
+    font-weight: bolder;
+    border-radius: 22px;
+    cursor: pointer;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
+    background-color: red;
+    border: 2px solid red;
 }
 .nav #login a:hover {
     color: red;
-}
+    background-color: white;
+    border: 2px solid red;
+}.nav #login #username {
+    color: red;
+ }
 .main {
     display: flex;
     flex-direction: column;
@@ -75,7 +87,8 @@ body {
 }
 name {
     position: absolute;
-    margin-bottom: -15px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
     left: 0;
     bottom: 0;
 }
