@@ -59,7 +59,13 @@ form .btn {
 }
 form a{
     margin: 8px 0px;
-    color: linear-gradient(to left, white 50%, rgb(3, 0, 202) 50%) right;
-    background-size: 200%;
-    transition: .5s ease-in-out;
+    color: rgb(255, 255, 255);
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+form a:hover {
+    color: blue;
 }
