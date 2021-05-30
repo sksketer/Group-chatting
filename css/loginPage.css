@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
 .main {
     height: 78vh;
     display: flex;
@@ -7,10 +9,81 @@
 .main form{
     width: 45%;
     margin: auto;
-    background-color: rgb(221, 33, 33);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 22px;
+    box-shadow: 0px 0px 8px green;
+}
+.form-main {
+    display: flex;
+    flex-direction: row;
+}
+.main form #heading {
+    color: rgb(30, 128, 0);
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'ZCOOL KuaiLe', cursive;
 }
 .main form .dataField{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 0px 12px;
+}
+#label {
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+#email, #password {
+    color: green;
+    padding: 5px 12px;
+    outline: none;
+    border: 2px solid transparent;
+    border-bottom: 2px solid green;
+}
+.btn {
+    margin-left: 60%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+#login-btn {
+    width: 125px;
+    color: white;
+    outline: none;
+    border-radius: 22px;
+    cursor: pointer;
+    padding: 3px 12px;
+    font-weight: bold;
+    border: 2px solid red;
+    background: linear-gradient(to left, red 50%, rgb(0, 255, 0) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-in-out;
+}
+#login-btn:hover {
+    background-position: left;
+}
+@media only screen and (max-width: 1150px) {
+    .form-main {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .btn {
+        margin-left: 50px;  
+    }
+}
+@media only screen and (max-width: 850px) {
+    .main form .dataField{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .main form {
+        width: 60%;
+    }
+    .btn {
+        margin-left: 12px;  
+    }
 }

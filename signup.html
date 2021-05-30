@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/signup.css">
     <title>SignUP</title>
 </head>
 <body>
     <div class="signup">
         <form action="" method="post">
+            <p id="heading">SignUP for Group chat</p>
             <div class="username">
                 <label for="">UserName</label> <br>
-                <input type="text" name="username" id="username"> <br> <br>
+                <input type="text" name="username" id="username" required> <br> <br>
             </div>
             <div class="email">
                 <label for="">Email-ID</label> <br>
-                <input type="email" name="email" id="email"> <br> <br>
+                <input type="email" name="email" id="email" required> <br> <br>
             </div>
             <div class="password">
                 <label for="">Password</label> <br>
-                <input type="password" name="password" id="password"> <br> <br>
+                <input type="password" name="password" id="password" minlength="10000000" required> <br> <br>
             </div>
             <div class="btn">
                 <input type="submit" value="Submit" id="save-btn">
                 <input type="reset" value="Reset" id="reset-btn">
             </div>
-            <a href="index.html">Alread have an Account?</a>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <a href="index.php">Alread have an Account?</a>
         </form>
+    </div>
+    <div id="success">
+        <h2>Regestration completed- </h2>
+        <a href="index.php" style="animate__animated animate__bounce animate__delay-2s animate__infinite infinite animate__slower "> Login </a>
     </div>
 </body>
 </html>

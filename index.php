@@ -10,20 +10,23 @@
 <body>
     <div class="main">
         <form action="components/checkLogin.php" method="post">
-            <div class="dataField">
-                <div class="email">
-                    <p>Email</p>
-                    <input type="text" name="email" id="email" autofocus spellcheck="true">
-                </div>
-                <div class="password">
-                    <p>Password</p>
-                    <input type="password" name="password" id="password">
+            <div class="form-main">
+                <p id="heading">Login To Group chat</p>
+                <div class="dataField">
+                    <div class="email">
+                        <p id="label">Email</p>
+                        <input type="text" name="email" id="email" autofocus spellcheck="true">
+                    </div>
+                    <div class="password">
+                        <p id="label">Password</p>
+                        <input type="password" name="password" id="password">
+                    </div>
                 </div>
             </div>
             <div class="btn">
                 <input type="submit" value="Login" name="login" id="login-btn">
+                <a href="signup.html">Don't have Account?</a>
             </div>
-            <a href="signup.html">Don't have Account?</a>
         </form>
     </div>
 </body>

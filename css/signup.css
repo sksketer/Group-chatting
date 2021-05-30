@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
 *{margin: 0; padding: 0; box-sizing: border-box;}
 body{
     background-color: rgb(57, 221, 213);
@@ -10,28 +11,42 @@ body{
     align-items: center;
     border: 2px solid rgb(2, 28, 61);
     box-shadow: inset 0px 0px 50px rgb(4, 57, 78);
+    position: relative;
+}
+form #heading {
+    color: rgb(9, 0, 128);
+    font-size: 35px;;
+    font-weight: bolder;
+    margin-left: -25px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    margin-bottom: 12px;
 }
 form .username label {
     /* position: absolute;
     top: 0;
     left: 0; */
 }
-form input {
+#username, #email, #password{
+    width: 320px;
     padding: 5px 12px;
     outline: none;
     margin-top: 2px;
     border: 1px solid transparent;
+    border-radius: 20px;
+    margin-left: -12px;
 }
 form input:focus {
     background-color: rgb(191, 255, 255);
     box-shadow: 0px 0px 3px white;
 }
 form .btn {
+    width: 300px;
     display: flex;
     justify-content: space-around;
 }
 #save-btn {
     border: 2px solid green;
+    padding: 8px 12px;
     color: green;
     font-weight: bold;
     border-radius: 8px;
@@ -46,6 +61,7 @@ form .btn {
 #reset-btn {
     border: 2px solid red;
     background: transparent;
+    padding: 8px 12px;
     color: red;
     font-weight: bold;
     border-radius: 8px;
@@ -68,4 +84,19 @@ form a{
 }
 form a:hover {
     color: blue;
+}
+#success {
+    position: absolute;
+    bottom: 100px;
+    left: 500px;
+}
+#success h2{
+    display: inline;
+}
+#success a {
+    color: red;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+    font-family: 'ZCOOL KuaiLe', cursive;
 }
