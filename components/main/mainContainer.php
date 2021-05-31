@@ -7,6 +7,7 @@
     <title></title>
     <style>
         .activeUser {
+            display : inline;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -24,14 +25,17 @@
     </style>
 </head>
 <body>
-    <?php
-        echo '<div class="displayMessage">';
+    <?php 
+        // while($usrrow = mysqli_fetch_assoc($usrresult)) {
             echo '<div class="activeUser">';
             echo '    <div id="user"></div>';
-            echo '    <p>sketer</p>';
+            echo '    <p>'.$usrrow['username'].'</p>';
             echo '</div>';
-
-            while($row = mysqli_fetch_assoc($result) ) {
+        // }
+    ?>
+    <?php
+        echo '<div class="displayMessage">';
+            while($row = mysqli_fetch_assoc($msgresult)) {
                 $flexDirection = ($_SESSION['username'] == $row['username']) ? "row-reverse" : "row";
                 $color = ($_SESSION['username'] == $row['username']) ? "orange" : "yellow";
 

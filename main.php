@@ -13,7 +13,8 @@
     $conn = mysqli_connect("localhost", "root", "", "live chatting");
     $usr = "SELECT username FROM `userlogins` WHERE status == 'Active'";
     $msg = "SELECT * FROM `messages`";
-    $result= mysqli_query($conn, $msg);
+    $usrresulr = mysqli_query($conn, $usr);
+    $msgresult= mysqli_query($conn, $msg);
 ?>
     <div class="container">
         <?php require 'components/navigationBar.php';?>
