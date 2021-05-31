@@ -74,6 +74,21 @@ body {
     display: flex;
     flex-direction: column;
 }
+.main .activeUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main .activeUser #user {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: rgb(255, 174, 0);
+    position: relative;
+}
+.main .activeUser p {
+    margin-top: -3px;
+}
 .main .displayMessage .userMessage {
     display: flex;
     flex-direction: row;

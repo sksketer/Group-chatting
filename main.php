@@ -11,6 +11,7 @@
 <?php
 //    header("refresh: 2");
     $conn = mysqli_connect("localhost", "root", "", "live chatting");
+    $usr = "SELECT username FROM `userlogins` WHERE status == 'Active'";
     $msg = "SELECT * FROM `messages`";
     $result= mysqli_query($conn, $msg);
 ?>
@@ -18,24 +19,7 @@
         <?php require 'components/navigationBar.php';?>
         <div class="main">
             <?php
-                echo '<div class="displayMessage">';
-                    while($row = mysqli_fetch_assoc($result) ) {
-                        $flexDirection = ($_SESSION['username'] == $row['username']) ? "row-reverse" : "row";
-                        $color = ($_SESSION['username'] == $row['username']) ? "orange" : "yellow";
-
-                        echo '<div class="userMessage" style="flex-direction: '.$flexDirection.'">';
-                            echo '<span id="user" style="background: '.$color.'">';
-                                echo '<name>' . $row['username'] . ' </name>';
-                            echo '</span>';
-                            echo '<span id="msg-container">';
-                            echo '    <div id="msg">';
-                            echo  $row['message'];
-                            echo '    </div>';
-                            echo '</span>';
-                            echo "<br>";
-                        echo '</div>';
-                    };
-                echo '</div>';
+                require 'components/main/mainContainer.php';
             ?>
             <div class="textMessage">
                 <form action="components/sendMessege.php" method="post">
