@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 body {
-    overflow: hidden;
-    /* overflow-x: hidden; */
+    /* overflow: hidden; */
+    overflow-x: hidden;
     background-color: rgb(32, 255, 99);
     padding: 0px;
     margin: 0px;
@@ -80,6 +80,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+#delMsg {
+    cursor: pointer;
+    color: blue;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1px 3px;
+    margin: 3px;;
 }
 .main .msg-section .activeUser #online {
     color: red;
