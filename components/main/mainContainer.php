@@ -22,6 +22,14 @@
             margin-top: -3px;
             margin-left: -5px;
         }
+        #delMsg {
+            cursor: pointer;
+            color: blue;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 1px 3px;
+            margin: 3px;
+        }
     </style>
 </head>
 <body>
@@ -40,6 +48,7 @@
             while($row = mysqli_fetch_assoc($msgresult)) {
                 $flexDirection = ($_SESSION['username'] == $row['username']) ? "row-reverse" : "row";
                 $color = ($_SESSION['username'] == $row['username']) ? "orange" : "yellow";
+                $visibility = ($_SESSION['username'] == $row['username']) ? "visible" : "hidden";
 
                 echo '<div class="userMessage" style="flex-direction: '.$flexDirection.'">';
                     echo '<span id="user" style="background: '.$color.'">';
@@ -47,10 +56,12 @@
                     echo '</span>';
                     echo '<span id="msg-container">';
                     echo '    <div id="msg">';
-                    echo  $row['message'];
+                            echo '<span id="delMsg" style="visibility: '.$visibility.'"> <a href="components/deleteMessage.php"><i class="fa fa-trash" aria-hidden="true"></i></a></span>';
+                            $_SESSION['msgSno'] = $row['sno'];
+                            $_SESSION['messageForDeleted'] = $row['message'];
+                            echo  $row['message'];
                     echo '    </div>';
-                    echo '</span>';
-                    echo "<br>";
+                    echo '</span>'; echo "<br>";
                 echo '</div>';
             };
         echo '</div>';
