@@ -8,6 +8,7 @@ session_start();
 <?php
   
 $conn = mysqli_connect("localhost", "root", "", "live chatting");
+$sno = $_SESSION['sno'];
 //change the status of user from 'Active' to 'Inactive'
 mysqli_query($conn, "UPDATE `userlogins` SET `status` = 'Inactive' WHERE `userlogins`.`sno` = '$sno'");
   

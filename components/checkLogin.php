@@ -25,6 +25,7 @@
                 $checkpasswordis++;
                 $username=$row['username'];
                 $user = $row['userType'];
+                $sno = $row['sno'];
                 mysqli_query($conn, "UPDATE `userlogins` SET `status` = 'Active' WHERE `userlogins`.`sno` = '$sno'");
             }
         }
@@ -34,6 +35,7 @@
     $_SESSION['username'] = $username;
     $_SESSION['email'] = $email;
     $_SESSION['password'] = $password;
+    $_SESSION['sno'] = $sno;
 
     if($checkemailis > 0 && $checkpasswordis > 0) header("Location: ../main.php");
     else if($checkemailis > 0 && $checkpasswordis == 0) echo "Password Not Matched";
