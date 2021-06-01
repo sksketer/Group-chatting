@@ -25,6 +25,7 @@
                 $checkpasswordis++;
                 $username=$row['username'];
                 $user = $row['userType'];
+                mysqli_query($conn, "UPDATE `userlogins` SET `status` = 'Active' WHERE `userlogins`.`sno` = '$sno'");
             }
         }
     }
@@ -34,14 +35,8 @@
     $_SESSION['email'] = $email;
     $_SESSION['password'] = $password;
 
-    if($checkemailis > 0 && $checkpasswordis > 0) {
-        echo "You are normal user";
-        header("Location: ../main.php");
-    }
-    else if($checkemailis > 0 && $checkpasswordis == 0) {
-        echo "Password Not Matched";
-    } else {
-        echo "<div class='userNotFound'><p>user not found</p>"."<a href='signup.php'>create new account</a></div>";
-    }
+    if($checkemailis > 0 && $checkpasswordis > 0) header("Location: ../main.php");
+    else if($checkemailis > 0 && $checkpasswordis == 0) echo "Password Not Matched";
+    else echo "<div class='userNotFound'><p>user not found</p>"."<a href='signup.php'>create new account</a></div>";
     
 ?>
