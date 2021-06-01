@@ -6,6 +6,11 @@ session_start();
 <body>
 
 <?php
+  
+$conn = mysqli_connect("localhost", "root", "", "live chatting");
+//change the status of user from 'Active' to 'Inactive'
+mysqli_query($conn, "UPDATE `userlogins` SET `status` = 'Inactive' WHERE `userlogins`.`sno` = '$sno'");
+  
 // remove all session variables
 session_unset();
 
