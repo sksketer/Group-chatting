@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2021 at 04:16 AM
+-- Generation Time: Jun 01, 2021 at 02:40 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -38,22 +38,10 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`sno`, `username`, `message`) VALUES
-(1, 'sketer', 'Hello, How are you Guys.'),
-(2, 'munda', 'hello, I am fine'),
-(3, 'sketer', 'hello munda'),
-(4, 'munda', 'hello sketer'),
-(5, 'sketer', 'kiya hall'),
-(6, 'munda', 'sab mast ha'),
-(7, 'sketer', 'hello munda again'),
-(8, 'munda', 'hello amrit'),
-(9, 'sketer', '5d41402abc4b2a76b9719d911017c592'),
-(10, 'sketer', 'hello'),
-(11, 'munda', 'hello'),
-(12, 'sketer', 'fft'),
-(13, 'munda', 'group'),
-(14, 'sketer', 'er'),
-(15, 'sketer', 'hello unda'),
-(16, 'sketer', 'hello munda');
+(1, 'sketer', 'Hello, How are you Guys. kiya hal ha'),
+(35, 'munda', 'i '),
+(36, 'munda', 'am'),
+(43, 'sketer', 'This message is deleted.');
 
 -- --------------------------------------------------------
 
@@ -66,16 +54,20 @@ CREATE TABLE `userlogins` (
   `ID` varchar(10) NOT NULL,
   `username` varchar(20) DEFAULT NULL,
   `email` varchar(35) DEFAULT NULL,
-  `password` varchar(32) DEFAULT NULL
+  `password` varchar(32) DEFAULT NULL,
+  `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `userlogins`
 --
 
-INSERT INTO `userlogins` (`sno`, `ID`, `username`, `email`, `password`) VALUES
-(1, 'LC00000001', 'sketer', 'ksamrit121@gmail.com', '7b0bfee9ff0dc93fd7be9472f36c7eaa'),
-(2, 'LC00000002', 'munda', 'amit.munda_cs18@gla.ac.in', 'baded928d477a27e85961ca625bb030c');
+INSERT INTO `userlogins` (`sno`, `ID`, `username`, `email`, `password`, `status`) VALUES
+(1, 'LC_sk00000', 'sketer', 'ksamrit121@gmail.com', '7b0bfee9ff0dc93fd7be9472f36c7eaa', 'Inactive'),
+(2, 'LC_mun0000', 'munda', 'amit.munda_cs18@gla.ac.in', 'baded928d477a27e85961ca625bb030c', 'Inactive'),
+(3, 'LC_kus0000', 'kushagra', 'kushagra.gangwar_cs18@gla.ac.in', '8c9f6ce40e5aa2b423bf216eb4c2b3ae', 'Inactive'),
+(4, 'LC_pra0000', 'pranjal', 'pranjal.kela_cs18@gla.ac.in', 'be033f5f7d2fd6a3d1a8fc65f19d7f37', 'Inactive'),
+(5, 'LC_sks0000', 'sksketer', 'sketergaming2121@gmail.com', 'cae79a29dd42ccc6e1e5c7269305b87c', 'Inactive');
 
 --
 -- Indexes for dumped tables
@@ -101,13 +93,13 @@ ALTER TABLE `userlogins`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `sno` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `sno` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `userlogins`
 --
 ALTER TABLE `userlogins`
-  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
