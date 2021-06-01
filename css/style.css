@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 body {
-    /* overflow: hidden; */
+    overflow: hidden;
+    /* overflow-x: hidden; */
     background-color: rgb(32, 255, 99);
+    padding: 0px;
+    margin: 0px;
 }
 .container {
     padding: 0px;
@@ -12,6 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 5vh;
+    padding: 10px 12px 3px 12px;
 }
 .nav #logo {
     margin: 0px 8px;
@@ -60,36 +64,51 @@ body {
 .main {
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 100%;
     margin: auto;
     padding: 8px;
 }
-.main .displayMessage {
-    height: 80vh;
-    padding: 15px;
-    box-shadow: 0px 0px 8px darkgreen, 0px 0px 5px rgb(255, 255, 255);
-    border-radius: 18px;
-    background-color: rgb(206, 255, 206);
-    overflow-y: scroll;
+.main .msg-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
-.main .activeUser {
+.main .msg-section .activeUser {
+    width: 5%;
+    text-align: center;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.main .activeUser #user {
+.main .msg-section .activeUser #online {
+    color: red;
+    font-weight: bold;
+}
+.main .msg-section .activeUser #user {
     width: 5vh;
     height: 5vh;
     border-radius: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
     background-color: rgb(255, 174, 0);
-    position: relative;
 }
-.main .activeUser p {
+.main .msg-section .activeUser p {
     margin-top: -3px;
 }
-.main .displayMessage .userMessage {
+.main .msg-section .displayMessage {
+    width: 93%;
+    height: 79vh;
+    padding: 15px;
+    box-shadow: 0px 0px 8px darkgreen, 0px 0px 5px rgb(255, 255, 255);
+    border-radius: 18px;
+    background-color: rgb(183, 252, 183);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    margin-right: 22px;
+}
+.main .msg-section .displayMessage .userMessage {
     display: flex;
     flex-direction: row;
 }
@@ -119,16 +138,17 @@ name {
     border-radius: 22px;
 }
 .main .textMessage {
+    width: 80%;
     height: 5vh;
     padding: 8px 0px;
+    margin-left: 5%;
 }
 .main .textMessage form {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
 }
 .main .textMessage form #message {
-    width: 70vw;
+    min-width: 80vw;
     color: white;
     outline: none; border: 2px solid rgb(66, 66, 66);
     border-radius: 50px;
@@ -144,12 +164,10 @@ name {
     background-color: white;
 }
 .main .textMessage form #send-btn {
-    width: 8%;
-    float: right;
     outline: none;
     border: 2px solid darkgreen;
     color: white;
-    padding:  10px 12px;
+    padding:  10px 3.5vw;
     border-radius: 22px;
     background-color: darkgreen;
     font-weight: bold;
@@ -157,4 +175,9 @@ name {
 .main .textMessage form #send-btn:hover {
     cursor: pointer;
     background-color: green;
+}
+@media only screen and (max-width: 550px) {
+    .main .textMessage form #message {
+        min-width: 70vw;
+    }
 }

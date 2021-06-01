@@ -25,14 +25,16 @@
     </style>
 </head>
 <body>
-    <!-- <?php 
-        // while($usrrow = mysqli_fetch_assoc($usrresult)) {
-            echo '<div class="activeUser">';
+    <?php 
+        echo '<div class="activeUser">';
+            echo '<p id="online">Online users</p>';
+            while($usrrow = mysqli_fetch_assoc($usrresult)) {
             echo '    <div id="user"></div>';
             echo '    <p>'.$usrrow['username'].'</p>';
-            echo '</div>';
-        // }
-    ?> -->
+            // echo '<p> username</p>';
+            }
+        echo '</div>';
+    ?>
     <?php
         echo '<div class="displayMessage">';
             while($row = mysqli_fetch_assoc($msgresult)) {
