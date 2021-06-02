@@ -81,14 +81,14 @@ body {
     flex-direction: column;
     justify-content: center;
 }
-#delMsg {
+/* #delMsg {
     cursor: pointer;
     color: blue;
     background-color: #fff;
     border-radius: 20px;
     padding: 1px 3px;
     margin: 3px;;
-}
+} */
 .main .msg-section .activeUser #online {
     color: red;
     font-weight: bold;
@@ -117,29 +117,28 @@ body {
     margin-right: 22px;
 }
 .main .msg-section .displayMessage .userMessage {
-    /* display: flex;
-    flex-direction: column; */
+    width: fit-content;
     margin: 12px;
 }
-.userMessage #user {
+/* .userMessage #user {
     width: 5vh;
     height: 5vh;
     border-radius: 50%;
     background-color: rgb(255, 174, 0);
     position: relative;
-}
-name {
+} */
+/* name {
     position: absolute;
     margin-bottom: 5px;
     text-transform: capitalize;
     left: 0;
     bottom: 0;
-}
+} */
 .userMessage #msg-container {
     margin-left: 22px;
     position: relative;
 }
-.userMessage #user2 {
+.userMessage #user {
     font-size: small;
     padding: 2px 12px;
     margin: 1px 0px;
@@ -150,9 +149,8 @@ name {
     left: -10px;
     color: white;
 }
-.userMessage #msg {
-    display: block;
-    max-width: 550px;
+.userMessage #msg-container #msg {
+    width: fit-content;
     padding: 15px 12px 3px 12px;
     background-color: lightgreen;
     border: 1px solid darkgreen;
