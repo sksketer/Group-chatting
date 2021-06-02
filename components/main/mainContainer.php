@@ -53,14 +53,16 @@
                 echo '<div class="userMessage" style="">';
                     echo '<span id="msg-container">';
                         echo '<div id="msg">';
-                                echo '<span id="delMsg" style="display: '.$display.';"> <a href="components/deleteMessage.php"><i class="fa fa-trash" aria-hidden="true"></i></a></span>';
-                                $_SESSION['msgSno'] = $row['sno'];
-                                $_SESSION['messageForDeleted'] = $row['message'];
-                                echo $_SESSION['msgSno'];
-                                echo  $row['message'];
+                                echo '<form action="components/deleteMessage.php" method="post">';
+                                echo '    <input type="hidden" name="msgSno" value="'.$row['sno'].'" id="">';
+                                echo '    <input type="hidden" name="msgMessage" value="'.$row['message'].'" id="">';
+                                echo     $row['message'];
+                                // echo ' <i class="fa fa-trash" aria-hidden="true"></i>';
+                                echo '    <input type="submit" value="delete"  style="display: '.$display.'">';
+                                echo '</form>';
                         echo '</div>';
 
-                        echo '<span id="user2" style="Background-color: '.$color.';">';
+                        echo '<span id="user" style="Background-color: '.$color.';">';
                                 echo $row['username'];
                         echo '</span>';
                     echo '</span>';
