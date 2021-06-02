@@ -9,7 +9,7 @@
 
 
     if($messege == "This message is deleted.") 
-        $query = "DELETE FROM `messages` WHERE `messages`.`sno` = '$messSno'";
+        $query = "DELETE FROM `messages` WHERE `messages`.`sno` = '$messSno' AND `messages`.`username` = '$username'";
     else
         $query = "UPDATE `messages` SET `message` = 'This message is deleted.' WHERE `messages`.`sno` = '$messSno'";
 
@@ -17,6 +17,9 @@
 
     if($result) {
         // header("Refresh:0; url=main/mainContainer.php");
+        echo $username."<br>";
+        echo $messege."<br>";
+        echo $messSno."<br>";
         header("Location: ../main.php");
     }
     else

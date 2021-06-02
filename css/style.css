@@ -117,8 +117,9 @@ body {
     margin-right: 22px;
 }
 .main .msg-section .displayMessage .userMessage {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: column; */
+    margin: 12px;
 }
 .userMessage #user {
     width: 5vh;
@@ -136,11 +137,23 @@ name {
 }
 .userMessage #msg-container {
     margin-left: 22px;
+    position: relative;
+}
+.userMessage #user2 {
+    font-size: small;
+    padding: 2px 12px;
+    margin: 1px 0px;
+    border-radius: 20px;
+    background-color: rgb(0, 90, 8);
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    color: white;
 }
 .userMessage #msg {
     display: block;
     max-width: 550px;
-    padding: 3px 5px;
+    padding: 15px 12px 3px 12px;
     background-color: lightgreen;
     border: 1px solid darkgreen;
     border-radius: 22px;
