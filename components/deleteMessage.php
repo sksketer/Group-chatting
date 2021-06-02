@@ -2,8 +2,8 @@
     session_start();
     
     $username = $_SESSION['username'];
-    $messege = $_SESSION['messageForDeleted'];
-    $messSno = $_SESSION['msgSno'];
+    $messege = $_POST['msgMessage'];
+    $messSno = $_POST['msgSno'];
 
     require 'connection/connectionFile.php';
 
@@ -17,9 +17,6 @@
 
     if($result) {
         // header("Refresh:0; url=main/mainContainer.php");
-        echo $username."<br>";
-        echo $messege."<br>";
-        echo $messSno."<br>";
         header("Location: ../main.php");
     }
     else
