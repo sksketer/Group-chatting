@@ -30,6 +30,13 @@
             padding: 1px 3px;
             margin: 3px;
         }
+        #displayUserMessage {
+            align-item: center;
+            max-width: 550px;
+            /* background-color: red; */
+            padding: 4px 2px 0px 5px;
+            
+        }
     </style>
 </head>
 <body>
@@ -56,9 +63,10 @@
                             echo '<legend style="background-color: '.$color.'; margin-left: '.$margin.';">'.$row['username'].'</legend>';
                             echo '<input type="hidden" name="msgSno" value="'.$row['sno'].'" id="">';
                             echo '<input type="hidden" name="msgMessage" value="'.$row['message'].'" id="">';
-                            echo $row['message'];
+                            echo "<div id='displayUserMessage'>". $row['message'] ."</div>";
                             // echo ' <i class="fa fa-trash" aria-hidden="true"></i>';
-                            echo '<input type="submit" value="|_|"  style="display: '.$display.'" id="del-btn">';
+                            // echo '<input type="submit" value="|_|"  style="display: '.$display.'" id="del-btn">';
+                            echo '<input type="image" src="img/delete.png" name="submit" style="display:'.$display.'"';
                         echo '</fieldset>';
                     echo '</form>';
                     
