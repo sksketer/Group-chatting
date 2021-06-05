@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>sk chat</title>
 </head>
 <body>
 <?php
 //    header("refresh: 2");
-    $conn = mysqli_connect("localhost", "root", "", "live chatting");
+    require 'components/connection/connectionFile.php';
     $usr = "SELECT username FROM `userlogins` WHERE status = 'Active'";
     $msg = "SELECT * FROM `messages`";
     $usrresult = mysqli_query($conn, $usr);
