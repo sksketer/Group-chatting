@@ -1,3 +1,8 @@
 <?php
-    $conn = mysqli_connect("localhost", "root", "", "live chatting");
+    $dbServer = "localhost";
+    $dbUser = "root";
+    $dbPassword = "";
+    $dbName = "live chatting";
+
+    $conn = mysqli_connect($dbServer, $dbUser, $dbPassword, $dbName);
 ?>
