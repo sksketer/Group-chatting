@@ -1,17 +1,8 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $connection_password = "";
-    $database = "live chatting";
-
     $email = $_POST["email"]; 
-    $password = $_POST["password"]; 
-
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $connection_password, $database);
-
-    // if($conn) echo "Connection sucessful";
+    $password = $_POST["password"];
     
+    require 'connection/connectionFile.php';
     $sql= "SELECT * FROM `userlogins`";
     $result=mysqli_query($conn,$sql);
 
@@ -26,7 +17,7 @@
                 $username=$row['username'];
                 $user = $row['userType'];
                 $sno = $row['sno'];
-                mysqli_query($conn, "UPDATE `userlogins` SET `status` = 'Active' WHERE `userlogins`.`sno` = '$sno'");
+                mysqli_query($conn, "UPDATE `userlogins` SET `status` = 'online' WHERE `userlogins`.`sno` = '$sno'");
             }
         }
     }
