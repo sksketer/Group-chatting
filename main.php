@@ -12,7 +12,7 @@
 <?php
 //    header("refresh: 2");
     require 'components/connection/connectionFile.php';
-    $usr = "SELECT username FROM `userlogins` WHERE status = 'Active'";
+    $usr = "SELECT username FROM `userlogins` WHERE status = 'online'";
     $msg = "SELECT * FROM `messages`";
     $usrresult = mysqli_query($conn, $usr);
     $msgresult = mysqli_query($conn, $msg);
