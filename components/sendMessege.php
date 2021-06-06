@@ -9,7 +9,6 @@
 
     $query = "INSERT INTO `messages` (`username`, `message`,`toUser`) VALUES ('$username', '$message','$toUser')";
     $result= mysqli_query($conn, $query);
-
     if($result) {
         // header("Refresh:0; url=main/mainContainer.php");
         header("Location: ../main.php");
