@@ -3,7 +3,7 @@
     $dbServer = "localhost";
     $dbUser = "root";
     $dbPassword = "";
-    $dbName = "Group chatting";
+    $dbName = "group chatting";
 
     $conn = mysqli_connect($dbServer, $dbUser, $dbPassword);
     if($conn) echo ""; else die("Connection failed: " . $conn->connect_error);
@@ -14,7 +14,8 @@
         $createTableMessage = "CREATE TABLE `".$dbName."`.`messages` (
             `sno` int(250) NOT NULL PRIMARY KEY AUTO_INCREMENT,
             `username` varchar(32) NOT NULL,
-            `message` varchar(150) NOT NULL
+            `message` varchar(150) NOT NULL,
+            `toUser` VARCHAR(32) NOT NULL
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
 
         $createTableUserLogins = "CREATE TABLE `".$dbName."`.`userlogins` (
