@@ -3,7 +3,7 @@
     $dbServer = "localhost";
     $dbUser = "root";
     $dbPassword = "";
-    $dbName = "live chatting";
+    $dbName = "Group chatting";
 
     $conn = mysqli_connect($dbServer, $dbUser, $dbPassword);
     if($conn) echo ""; else die("Connection failed: " . $conn->connect_error);
