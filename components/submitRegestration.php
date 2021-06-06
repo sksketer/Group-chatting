@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect("localhost", "root", "", "live chatting");
+    require 'connection/connectionFile.php';
 
     $username = $_POST['username'];
     $email = $_POST['email'];
