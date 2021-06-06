@@ -5,15 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <style>
-        #displayUserMessage {
-            align-item: center;
-            max-width: 550px;
-            /* background-color: red; */
-            padding: 4px 2px 0px 5px;
-            
-        }
-    </style>
 </head>
 <body>
     <?php 
@@ -32,8 +23,16 @@
                 $display = ($_SESSION['username'] == $row['username']) ? "visible" : "none";
                 $flexDirection = ($_SESSION['username'] == $row['username']) ? "row-reverse" : "row";
                 $margin = ($_SESSION['username'] == $row['username']) ? "" : "";
+                $toUser = $row['toUser'];
+                $toUserDisplay = "none";
+                if($toUser == "All") {
+                    $toUserDisplay = "visible";
+                } else {
+                    if($toUser == $_SESSION['username']) $toUserDisplay = "visible";
+                    if($row['username'] == $_SESSION['username']) $toUserDisplay = "visible";
+                }
                 
-                echo '<div class="userMessage">';
+                echo '<div class="userMessage" style="display:'.$toUserDisplay.'">';
                     echo '<form action="components/deleteMessage.php" method="post" style="flex-direction:'.$flexDirection.'">';
                         echo '<fieldset style="flex-direction:'.$flexDirection.'">';
                             echo '<legend style="background-color: '.$color.'; margin-left: '.$margin.';">'.$row['username'].'</legend>';

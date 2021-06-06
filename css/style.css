@@ -1,21 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box;}
 body {
-    /* overflow: hidden; */
-    overflow-x: hidden;
     background-color: rgb(32, 255, 99);
-    padding: 0px;
-    margin: 0px;
 }
 .container {
-    padding: 0px;
+    width: 100%;
 }
 .nav {
     display: flex;
     flex: row;
     justify-content: space-between;
     align-items: center;
-    height: 5vh;
-    padding: 10px 12px 3px 12px;
+    padding: 10px 0px;;
 }
 .nav #logo {
     margin: 0px 8px;
@@ -52,28 +48,29 @@ body {
     flex-direction: column;
     width: 100%;
     margin: auto;
-    padding: 8px;
 }
 .main .msg-section {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .main .msg-section .activeUser {
     width: 5%;
-    text-align: center;
-    /* background-color: red; */
     display: flex;
+    margin-left: 12px;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
 }
 .main .msg-section .activeUser #online {
     color: red;
     font-weight: bold;
+    margin: 10px 0px;
 }
 .main .msg-section .activeUser #user {
-    width: 5vh;
-    height: 5vh;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     margin-left: 20%;
     margin-right: 20%;
@@ -82,28 +79,29 @@ body {
 .main .msg-section .activeUser p {
     margin-top: -3px;
 }
+
 .main .msg-section .displayMessage {
-    width: 93%;
-    height: 79vh;
+    width: 90%;
+    height: 78vh;
+    margin: 10px auto;
     padding: 15px;
     box-shadow: 0px 0px 8px darkgreen, 0px 0px 5px rgb(255, 255, 255);
     border-radius: 18px;
     background-color: rgb(183, 252, 183);
     overflow-y: scroll;
-    margin-right: 22px;
 }
 .userMessage form {
     display: flex;
     flex-direction: row;
 }
 .userMessage form fieldset {
-    /* display: inline; */
     display: flex;
     flex-direction: row;
+    margin: 5px 0px;
     border-radius: 55px;
+    padding: 1px 10px 3px 10px;
     border: 1px solid darkgreen;
     background-color: lightgreen;
-    margin: 5px 0px;
 }
 .userMessage form fieldset legend {
     color: white;
@@ -117,23 +115,45 @@ body {
     cursor: pointer;
     padding: 3px 3px;
     background: transparent;
-    margin: 0px 3px;
+    margin: 1px 3px;
+}
+.userMessage form fieldset #displayUserMessage {
+    border-radius: 20px;
+    padding: 4px 2px 0px 8px;
+    
 }
 .main .textMessage {
-    width: 80%;
-    height: 5vh;
+    width: 100%;
     padding: 8px 0px;
-    margin-left: 5%;
 }
 .main .textMessage form {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    padding: 3px;
 }
-.main .textMessage form #message {
-    min-width: 80vw;
+.main .textMessage form #toUser {
+    width: 8%;
     color: white;
     outline: none; border: 2px solid rgb(66, 66, 66);
-    border-radius: 50px;
+    border-radius: 50px 20px 20px 50px;
+    font-size: small;
+    padding: 10px;
+    margin: 0px 3px;
+    background-color: rgb(66, 66, 66);
+    cursor: pointer;
+}
+.main .textMessage form #toUser:hover {
+    background-color: rgb(99, 99, 99);
+}
+::placeholder {
+    color: white;
+}
+.main .textMessage form #message {
+    width: 85%;
+    color: white;
+    outline: none; border: 2px solid rgb(66, 66, 66);
+    border-radius: 20px 50px 50px 20px;
     padding: 10px;
     margin: 0px 3px;
     background-color: rgb(66, 66, 66);
@@ -149,7 +169,7 @@ body {
     outline: none;
     border: 2px solid darkgreen;
     color: white;
-    padding:  10px 3.5vw;
+    padding:  10px 25px;
     border-radius: 22px;
     background-color: darkgreen;
     font-weight: bold;
@@ -160,6 +180,6 @@ body {
 }
 @media only screen and (max-width: 550px) {
     .main .textMessage form #message {
-        min-width: 70vw;
+        /* min-width: 70vw; */
     }
 }

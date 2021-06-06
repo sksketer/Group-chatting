@@ -22,7 +22,7 @@
             echo "<div style='color:red; text-align: center; margin: 20px; font-size: larger;'>Error in Regestration. </div>";
 
     } else {
-        echo '<h1 style="color:red"> CantNot Commected to server. <a href="../signup.html">Try Again</a> </h1>';
+        echo '<h1 style="color:red"> CantNot Connected to server. <a href="../signup.html">Try Again</a> </h1>';
     }
 
 
