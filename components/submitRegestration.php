@@ -24,7 +24,7 @@
             if($conn) {
                 $insertQuery = "INSERT INTO `userlogins` (`sno`, `ID`, `username`, `email`, `password`, `status`) 
                                 VALUES
-                                (NULL, '', '$username', '$email', '$password', '');";
+                                (NULL, '', '$username', '$email', '$password', 'offline');";
                 
                 $result= mysqli_query($conn, $insertQuery);
                 if($result) {
