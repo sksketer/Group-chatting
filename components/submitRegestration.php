@@ -12,7 +12,7 @@
         while($count == 0 && $emailrow = mysqli_fetch_assoc($emailResult)) {
             if($count ==0 && $emailrow['email'] == $email) {
                 echo '<script>
-                        alert("Email- '.$email.' is Already used by someone")
+                        alert("Email- '.$email.' is Already used by someone.")
                         window.location.href="../signup.php";                        
                     </script>';
                 $count++;
