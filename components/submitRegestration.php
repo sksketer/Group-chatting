@@ -6,11 +6,6 @@
     $password = md5($_POST['password']);
     $id = "";
 
-        echo $id."<br>";
-        echo $username."<br>";
-        echo $email."<br>";
-        echo $password."<br>";
-
     if($conn) {
         $insertQuery = "INSERT INTO `userlogins` (`sno`, `ID`, `username`, `email`, `password`, `status`) 
                         VALUES
